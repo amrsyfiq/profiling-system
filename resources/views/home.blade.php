@@ -18,7 +18,17 @@
                         @if(session('success'))
                             <div class="alert alert-success alert-dismissible" style="width:100%;">
                                 <strong>{{ session('success') }}</strong> 
-                                <button class="close btn btn-transparent" style="float:right; font-weight:bolder; margin-top:-12px; margin-right:-30px; font-size:20px" data-dismiss="alert" aria-label="close">&times;</button>
+                                <button class="close btn btn-transparent" style="position: absolute; top:5px; right:0; font-weight:bolder; font-size:20px" data-dismiss="alert" aria-label="close">&times;</button>
+                            </div>
+                        @endif
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                                <button class="close btn btn-transparent" style="position: absolute; top:5px; right:0; font-weight:bolder; font-size:20px" data-dismiss="alert" aria-label="close">&times;</button>
                             </div>
                         @endif
         

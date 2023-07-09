@@ -15,7 +15,7 @@
 5.    Dependency Manager (Composer) 
 
 ## Setup
-<!-- 1.    git clone [https://github.com/amrsyfiq)  -->
+1.    git clone [https://github.com/amrsyfiq/profiling-system.git) 
 2.    change to working directory: `cd folder` 
 3.    run `composer install` 
 4.    Duplicate .env.example file. Rename duplicated file to .env
@@ -27,7 +27,7 @@
 8.    open http://127.0.0.1:8000/ in the browser
 
 ## Setup If Using Docker
-<!-- 1.    git clone [https://github.com/amrsyfiq)  -->
+1.    git clone [https://github.com/amrsyfiq/profiling-system.git) 
 2.    change to working directory: `cd folder` 
 3.    run `docker-compose up -d` 
 4.    run `docker exec -it folder-php sh` to enter into container

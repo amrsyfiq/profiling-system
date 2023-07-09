@@ -34,7 +34,7 @@
 
                                     <tr>
                                         <td><strong>Tarikh Lahir: </strong></td>
-                                        <td>{{ $profile->tarikh_lahir ?? '-' }}</td>
+                                        <td>{{ $profile->tarikh_lahir->format('d/m/Y') ?? '-' }}</td>
                                     </tr>
 
                                     <tr>

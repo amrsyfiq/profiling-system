@@ -23,8 +23,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <div>
-                    <img src="{{url('/img/cadet_division.jpg')}}" alt="Image" style="width: 42px; height: 42px; margin-right: 5px; margin-top: -10px;"/>
-                    <img src="{{url('/img/abdul_rahman.jpg')}}" alt="Image" style="width: 38px; height: 38px; margin-right: 10px; margin-top: -10px;"/>
+                    <img src="{{url('/img/cadet_division.png')}}" alt="Image" style="width: 40px; height: 40px; margin-right: 5px; margin-top: -10px;"/>
+                    <img src="{{url('/img/abdul_rahman.png')}}" alt="Image" style="width: 40px; height: 40px; margin-right: 10px; margin-top: -10px;"/>
                     <a class="navbar-brand" href="{{ url('/') }}" style="font-size: 200%;">
                         Profiling System
                     </a>

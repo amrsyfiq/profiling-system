@@ -36,9 +36,9 @@
                         <h3>Carian Profil</h3>
                         <form action="{{ route('search') }}" method="GET">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" name="query" value="{{ $query ?? '' }}" placeholder="Search by No Tentera">
+                                <input type="text" class="form-control" name="query" value="{{ $query ?? '' }}" placeholder="Carian mengikut No Tentera">
                                 <button type="submit" class="input-group-append btn btn-secondary">
-                                    Search
+                                    Cari
                                 </button>
                             </div>
                         </form>
@@ -57,7 +57,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($profiles as $profile)
+                                    @forelse($profiles as $profile)
                                         <tr>
                                             <td>{{ $profile->no_tentera }}</td>
                                             <td>{{ $profile->nama }}</td>
@@ -67,7 +67,11 @@
                                                 <a href="{{ route('profile', ['id' => $profile->id]) }}"><i class="bi bi-person-circle" style="font-size: 25px;"></i></a>
                                             </td>
                                         </tr>
-                                    @endforeach
+                                        @empty
+                                        <tr>
+                                            <td colspan="5" style="text-align: center;">No Tentera tidak ditemui</td>
+                                        </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
                         @endif

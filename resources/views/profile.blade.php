@@ -24,142 +24,111 @@
                                 <table class="table table-bordered mt-4">
                                     <tr>
                                         <td><strong>Nama: </strong></td>
-                                        <td>{{ $profile->nama ?? '-' }}</td>
+                                        <td colspan="5">{{ $profile->nama ?? '-' }}</td>
                                     </tr>
-
                                     <tr>
+                                        <td><strong>No IC Awam: </strong></td>
+                                        <td colspan="2">{{ $profile->no_ic_awam ?? '-' }}</td>
                                         <td><strong>Kompeni: </strong></td>
-                                        <td>{{ $profile->kompeni ?? '-' }}</td>
+                                        <td colspan="2">{{ $profile->kompeni ?? '-' }}</td>
                                     </tr>
 
                                     <tr>
                                         <td><strong>Tarikh Lahir: </strong></td>
-                                        <td>{{ $profile->tarikh_lahir->format('d/m/Y') ?? '-' }}</td>
+                                        <td colspan="2">{{ $profile->tarikh_lahir->format('d/m/Y') ?? '-' }}</td>
+                                        <td><strong>Negeri Kelahiran: </strong></td>
+                                        <td colspan="2">{{ $profile->negeri_kelahiran ?? '-' }}</td>
                                     </tr>
-
-                                    <tr>
-                                        <td><strong>No IC Awam: </strong></td>
-                                        <td>{{ $profile->no_ic_awam ?? '-' }}</td>
-                                    </tr>
-
+                                    
                                     <tr>
                                         <td><strong>Umur: </strong></td>
-                                        <td>{{ $profile->umur ?? '-' }}</td>
+                                        <td colspan="2">{{ $profile->umur ?? '-' }}</td>
+                                        <td><strong>Jantina: </strong></td>
+                                        <td colspan="2">{{ $profile->result->JANTINA ?? '-' }}</td>
                                     </tr>
 
                                     <tr>
-                                        <td><strong>Negeri Kelahiran: </strong></td>
-                                        <td>{{ $profile->negeri_kelahiran ?? '-' }}</td>
+                                        <td><strong>Platun: </strong></td>
+                                        <td colspan="2">{{ $profile->result->PLATUN ?? '-' }}</td>
+                                        <td><strong>Seksyen: </strong></td>
+                                        <td colspan="2">{{ $profile->result->SEKSYEN ?? '-' }}</td>
                                     </tr>
 
                                     <tr>
                                         <td><strong>Status Perkahwinan: </strong></td>
-                                        <td>{{ $profile->status_perkahwinan ?? '-' }}</td>
-                                    </tr>
-
-                                    <tr>
+                                        <td colspan="2">{{ $profile->status_perkahwinan ?? '-' }}</td>
                                         <td><strong>Jumlah Anak: </strong></td>
-                                        <td>{{ $profile->jumlah_anak ?? '-' }}</td>
+                                        <td colspan="2">{{ $profile->jumlah_anak ?? '-' }}</td>
                                     </tr>
 
                                     <tr>
                                         <td><strong>Agama: </strong></td>
-                                        <td>{{ $profile->agama ?? '-' }}</td>
-                                    </tr>
-
-                                    <tr>
+                                        <td colspan="2">{{ $profile->agama ?? '-' }}</td>
                                         <td><strong>Bangsa: </strong></td>
-                                        <td>{{ $profile->bangsa ?? '-' }}</td>
+                                        <td colspan="2">{{ $profile->bangsa ?? '-' }}</td>
                                     </tr>
-
-                                    <tr>
-                                        <td><strong>Keputusan SPM: </strong></td>
-                                        <td>{{ $profile->keputusan_SPM ?? '-' }}</td>
-                                    </tr>
-
+                                    
                                     <tr>
                                         <td><strong>Kelayakan Akademik Tertinggi: </strong></td>
-                                        <td>{{ $profile->kelayakan_akademik_tertinggi ?? '-' }}</td>
+                                        <td colspan="2">{{ $profile->kelayakan_akademik_tertinggi ?? '-' }}</td>
+                                        <td><strong>Keputusan SPM: </strong></td>
+                                        <td colspan="2">{{ $profile->keputusan_SPM ?? '-' }}</td>
                                     </tr>
 
                                     <tr>
                                         <td><strong>Bidang Pengajian: </strong></td>
                                         <td>{{ $profile->bidang_pengajian ?? '-' }}</td>
-                                    </tr>
-
-                                    <tr>
                                         <td><strong>Pusat Pengajian: </strong></td>
                                         <td>{{ $profile->pusat_pengajian ?? '-' }}</td>
-                                    </tr>
-
-                                    <tr>
                                         <td><strong>CGPA: </strong></td>
                                         <td>{{ $profile->CGPA ?? '-' }}</td>
                                     </tr>
 
                                     <tr>
                                         <td><strong>Sukan: </strong></td>
-                                        <td>{{ $profile->sukan ?? '-' }}</td>
-                                    </tr>
-
-                                    <tr>
+                                        <td colspan="2">{{ $profile->sukan ?? '-' }}</td>
                                         <td><strong>Muzik: </strong></td>
-                                        <td>{{ $profile->muzik ?? '-' }}</td>
+                                        <td colspan="2">{{ $profile->muzik ?? '-' }}</td>
                                     </tr>
 
                                     <tr>
                                         <td><strong>Pekerjaan Sebelum Masuk Tentera: </strong></td>
-                                        <td>{{ $profile->pekerjaan_sebelum_masuk_tentera ?? '-' }}</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><strong>Bahasa: </strong></td>
-                                        <td>{{ $profile->bahasa ?? '-' }}</td>
+                                        <td colspan="5">{{ $profile->pekerjaan_sebelum_masuk_tentera ?? '-' }}</td>
                                     </tr>
 
                                     <tr>
                                         <td><strong>Tinggi: </strong></td>
                                         <td>{{ $profile->tinggi ?? '-' }}</td>
-                                    </tr>
-
-                                    <tr>
                                         <td><strong>Berat: </strong></td>
                                         <td>{{ $profile->berat ?? '-' }}</td>
-                                    </tr>
-
-                                    <tr>
                                         <td><strong>BMI: </strong></td>
                                         <td>{{ $profile->BMI ?? '-' }}</td>
                                     </tr>
 
                                     <tr>
+                                        <td><strong>Bahasa: </strong></td>
+                                        <td colspan="2">{{ $profile->bahasa ?? '-' }}</td>
                                         <td><strong>Kemahiran Membaca Al-Quran: </strong></td>
-                                        <td>{{ $profile->kemahiran_membaca_alquran ?? '-' }}</td>
+                                        <td colspan="2">{{ $profile->kemahiran_membaca_alquran ?? '-' }}</td>
                                     </tr>
 
                                     <tr>
                                         <td><strong>Strength & Weakness: </strong></td>
-                                        <td>{{ $profile->strength_and_weakness ?? '-' }}</td>
+                                        <td colspan="5">{{ $profile->strength_and_weakness ?? '-' }}</td>
                                     </tr>
 
                                     <tr>
                                         <td><strong>Pemilihan KOR Pilihan Pertama: </strong></td>
                                         <td>{{ $profile->pemilihan_KOR_pilihan_pertama ?? '-' }}</td>
-                                    </tr>
-
-                                    <tr>
                                         <td><strong>Pemilihan KOR Pilihan Kedua: </strong></td>
                                         <td>{{ $profile->pemilihan_KOR_pilihan_kedua ?? '-' }}</td>
-                                    </tr>
-
-                                    <tr>
                                         <td><strong>Pemilihan KOR Pilihan Ketiga: </strong></td>
                                         <td>{{ $profile->pemilihan_KOR_pilihan_ketiga ?? '-' }}</td>
                                     </tr>
 
                                     <tr>
-                                        <td><strong>Berminat Menyertai Pasukan Khas ?: </strong></td>
-                                        <td>{{ $profile->berminat_menyertai_pasukan_khas ?? '-' }}</td>
+                                        <td><strong>Berminat Menyertai Pasukan Khas: </strong></td>
+                                        <td colspan="5">{{ $profile->berminat_menyertai_pasukan_khas ?? '-' }}</td>
                                     </tr>
 
                                 </table>

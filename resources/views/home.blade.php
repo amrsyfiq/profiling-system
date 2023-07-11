@@ -37,10 +37,21 @@
                             <div class="input-group mb-3">
                                 <input type="file" class="form-control" name="file" accept=".xlsx, .xls">
                                 <button type="submit" class="input-group-append btn btn-secondary">
-                                    Import
+                                    Import Data User
                                 </button>
                             </div>
                         </form>
+        
+                        <form action="{{ route('importMarkah') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <div class="input-group mb-3">
+                                <input type="file" class="form-control" name="file" accept=".xlsx, .xls">
+                                <button type="submit" class="input-group-append btn btn-secondary">
+                                    Import Data Pendorong
+                                </button>
+                            </div>
+                        </form>
+                        <p style="font-style: italic; margin-left: 10px; margin-top: -10px; color: grey;">Sila sahkan bahawa fail dan formatnya adalah betul.</p>
                     </div>
                     <div class="mb-5">
                         <h3>Carian Profil</h3>
@@ -74,7 +85,8 @@
                                             <td>{{ $profile->tarikh_lahir->format('d/m/Y') }}</td>
                                             <td>{{ $profile->no_ic_awam }}</td>
                                             <td>
-                                                <a href="{{ route('profile', ['id' => $profile->id]) }}"><i class="bi bi-person-circle" style="font-size: 25px;"></i></a>
+                                                <a href="{{ route('profile', ['id' => $profile->id]) }}"><i class="bi bi-person-circle" style="font-size: 25px; margin-left: 20px; margin-right: 5px;"></i></a>
+                                                <a href="{{ route('result', ['id' => $profile->id]) }}"><i class="bi bi-percent" style="font-size: 25px; color:green;"></i></a>
                                             </td>
                                         </tr>
                                         @empty
